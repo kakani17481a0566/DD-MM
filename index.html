@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Today's Date</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        background-color: #f2f2f2;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 20px;
+      }
+
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #333;
+        color: #fff;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Today's Date</h1>
+    </header>
+    <main>
+      <table>
+        <tr>
+          <th>Date</th>
+          <td><span id="date"></span></td>
+        </tr>
+      </table>
+    </main>
+    <script>
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0');
+      var date = dd + '/' + mm;
+      document.getElementById('date').textContent = date;
+    </script>
+    
+  </body>
+</html>
